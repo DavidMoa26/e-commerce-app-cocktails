@@ -17,7 +17,8 @@
   "scripts": {
     "start": "nodemon app.js",
     "data:import": "node seeder",
-    "data:destroy": "node seeder -d"
+    "data:destroy": "node seeder -d",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "David",
   "license": "ISC",
